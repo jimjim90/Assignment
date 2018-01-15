@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'GameController@index');
+
+Route::get('/game', 'GameController@play');
+
+Route::post('/game', 'GameController@store');
