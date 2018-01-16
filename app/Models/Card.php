@@ -15,7 +15,7 @@ class Card
     public function __construct($suit, $value)
     {
         $this->suit = $suit;
-        $this->Value = $value;
+        $this->value = $value;
     }
 
     /**
