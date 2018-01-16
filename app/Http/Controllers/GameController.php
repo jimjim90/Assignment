@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Utilities\DeckGenerator;
 use App\Models\Deck;
+use App\Models\Card;
 use Illuminate\Support\Facades\DB;
 
 class GameController extends Controller
@@ -30,8 +31,10 @@ class GameController extends Controller
         $userId = str_random(10);
         session(['user_id' => $userId]);
         $desiredCard = $request->desiredcard;
-        $cardsInDeck = serialize((new DeckGenerator)->generateDeck());
-        $cardsInHand = serialize(new Deck);
+        $cardsInDeck = (new DeckGenerator)->generateDeck();
+        $cardsInHand = new Deck;
+        $cardsInDeck->to_json();
+        $cardsInHand->to_json();
         DB::table('game')->insert(['user_id' => $userId, 'cards_in_deck' => $cardsInDeck, 'cards_in_hand' => $cardsInHand,  'card_desired' => $desiredCard]);
         return redirect('/game');
     }
