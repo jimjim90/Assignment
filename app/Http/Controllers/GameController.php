@@ -44,6 +44,9 @@ class GameController extends Controller
     public function play()
     {
         $data = DB::table('game')->where('user_id', session()->get('user_id'))->get();
+        $cid = unserialize($data->first()->cards_in_deck);
+        $cih = unserialize($data->first()->cards_in_hand);
+        dd($cid);
         return view('game/play')->with('data', $data);
     }
 
