@@ -1,0 +1,20 @@
+Dit is de webapplicatie die ik heb gemaakt als assignment voor youwe
+
+ik heb mijn best gedaan om zo veel mogelijk werkend te krijgen maar ben uiteindelijk 
+vastgelopen bij het omzetten van data naar de database. als ik achteraf terugkijk had ik een heleboel anders gedaan.
+zoals de manier van data opslag. de manier waarop de kaarten worden gegenereerd en had het mischien liever in een andere environment gemaakt.
+
+voor de rest zijn er wel dingen die goed zijn gegaan... zoals de MVC structuur.
+
+ik denk dat als ik meer tijd had gehad dat ik het uiteindelijk nog wel werkend had kunnen krijgen. 
+maar ik ben op het punt gekomen waarin ik de deck kaarten moest serializen voordat ik het in de database had gestopt
+en aangezien ik niet genoeg verstand heb van hoe alles in elkaar zit. 
+had ik de structuur verkeerd gemaakt om het ook daadwerkelijk te kunnen serializen.
+ik heb zelf ook nog JSON_encode geprobeerd te gebruiken maar had weer andere problemen.
+als ik meer tijd had gehad dan kon ik de objects omzetten in arrays via een integrated functie in de class.
+en het daarna serializen of te encoden.
+
+in iegenval hopelijk valt er toch nog wat uit te halen.
+
+met vriendelijke groet,
+Jimmy Brenner
